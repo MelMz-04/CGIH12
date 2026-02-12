@@ -79,7 +79,7 @@ int main() {
 	// Define las dimensiones del viewport
 	glViewport(0, 0, screenWidth, screenHeight);
 
-	//CrearShader();
+	CrearShader();
 
 	// Set up vertex data (and buffer(s)) and attribute pointers
 	GLfloat vertices[] =
@@ -119,7 +119,7 @@ int main() {
 
 		// Render
 		// Clear the colorbuffer
-		glClearColor(0.2f, 0.3f, 0.3f, 1.0f);
+		glClearColor(0.2f, 0.6f, 0.3f, 1.0f); //Cambio de color del fondo
 		glClear(GL_COLOR_BUFFER_BIT);
 
 
