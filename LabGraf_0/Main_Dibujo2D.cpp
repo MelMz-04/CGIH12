@@ -68,6 +68,7 @@ int main() {
 	unsigned int indices[] = {  // note that we start from 0!
 		3,2,1,// second Triangle
 		0,1,3,
+		0,2,3
 		
 	};
 
@@ -125,24 +126,21 @@ int main() {
         //glDrawArrays(GL_POINTS,0,1);
         
         //glDrawArrays(GL_LINES,0,2); //vertice, puntos 
-        //glDrawArrays(GL_LINE_LOOP,0,4); //dibuja el númer0 de líneas usado
+        //glDrawArrays(GL_LINE_LOOP,0,4); //dibuja el número de líneas usado
         
         //glDrawArrays(GL_TRIANGLES,0,3);
         //glDrawElements(GL_TRIANGLES, 3,GL_UNSIGNED_INT,0); //dibuja a partir de los indíces
 
 	
-		//glDrawArrays(GL_POINTS,3,1);//1 Punto distinto*
+		//glDrawArrays(GL_POINTS,3,1);//1. Punto distinto
 
-		//glDrawArrays(GL_POINTS, 0, 4);//2 Cuatro puntos
+		//glDrawArrays(GL_POINTS, 0, 4);//2. Cuatro puntos
 
-		//glDrawArrays(GL_LINES,0,4);   // 3 Paralelas
+		//glDrawArrays(GL_LINES,0,4);   // 3. Paralelas
 
-		glDrawElements(GL_TRIANGLES, 3, GL_UNSIGNED_INT, );//4 Triangulo invertido
+		//glDrawElements(GL_TRIANGLES, 3, GL_UNSIGNED_INT, (void*)(6 * sizeof(unsigned int)));//4. Triangulo invertido
 
-		//glDrawElements(GL_TRIANGLES, 6, GL_UNSIGNED_INT, 0); // 5 Cuadrado
-
-
-		
+		glDrawElements(GL_TRIANGLES, 6, GL_UNSIGNED_INT, 0); //5. Cuadrado
         
         
         glBindVertexArray(0);
