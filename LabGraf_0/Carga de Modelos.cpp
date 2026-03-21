@@ -122,11 +122,12 @@ int main( )
         glUniformMatrix4fv(glGetUniformLocation(shader.Program, "projection"), 1, GL_FALSE, glm::value_ptr(projection));
         glUniformMatrix4fv(glGetUniformLocation(shader.Program, "view"), 1, GL_FALSE, glm::value_ptr(view));
 
-        // Draw the loaded model
+        // Draw the loaded model -- Primer perro (sin transformaciones, en el origen)
         glm::mat4 model(1);
         glUniformMatrix4fv(glGetUniformLocation(shader.Program, "model"), 1, GL_FALSE, glm::value_ptr(model));
         dog.Draw(shader);
 
+        // Segundo perro (trasladado, rotado y escalado)
         model = glm::mat4(1);
         model = glm::translate(model, glm::vec3(2.0f, 0.0f, 0.0f));
         model = glm::rotate(model, glm::radians(20.0f), glm::vec3(0.0f, 0.0f, 1.0f));
