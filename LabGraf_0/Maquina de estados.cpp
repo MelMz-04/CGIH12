@@ -499,7 +499,7 @@ void KeyCallback(GLFWwindow* window, int key, int scancode, int action, int mode
 	}
 	if (keys[GLFW_KEY_M])
 	{
-		AnimDog = !AnimDog; // <<< CAMBIO: activa/desactiva caminata del perro
+		AnimDog = !AnimDog; //Caminata perro
 	}
 }
 
